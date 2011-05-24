@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td>Key</td>
+    <td>Value</td>
+  <%- @pairs.each do |pair| %>
+    <tr>
+      <td><%= pair.first %></td>
+      <td><%= pair.last %></td>
+    </tr>
+  <% end %>
+</table>
