@@ -4,7 +4,7 @@ class TestController < ApplicationController
       Rails.cache.write i, random_string(10)
     end
 
-    @pairs = (1..20).inject([]) do |pairs, key|
+    @pairs = (0..19).inject([]) do |pairs, key|
       pairs << [key, Rails.cache.read(key)]
     end
   end
