@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  caches_action :show
+
   # GET /contacts
   # GET /contacts.xml
   def index
