@@ -7,6 +7,8 @@ class TestController < ApplicationController
     @pairs = (0..19).inject([]) do |pairs, key|
       pairs << [key, Rails.cache.read(key)]
     end
+
+    @stats = Rails.cache.stats.first.last
   end
 
   private
