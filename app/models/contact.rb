@@ -8,4 +8,5 @@ class Contact < ActiveRecord::Base
 
   def expire_contact_all_cache
     Rails.cache.delete('Contact.all')
+  end
 end
