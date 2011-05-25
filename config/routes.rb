@@ -1,5 +1,4 @@
 MemcacheExample::Application.routes.draw do
   resources :contacts
-
-  match ':controller(/:action(/:id(.:format)))'
+  root :to => 'contacts#index'
 end
