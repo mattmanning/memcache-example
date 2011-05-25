@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
   # GET /contacts.xml
   def index
     @contacts = Contact.all_cached
+    @stats    = Rails.cache.stats.first.last
 
     respond_to do |format|
       format.html # index.html.erb

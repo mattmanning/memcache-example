@@ -23,3 +23,25 @@
 <br />
 
 <%= link_to 'New Contact', new_contact_path %>
+
+
+<h1>Cache Stats</h1>
+
+<table>
+  <tr>
+    <th>Metric</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Cache hits:</td>
+    <td><%= @stats['cas_hits'] %></td>
+  </tr>
+  <tr>
+    <td>Cache misses:</td>
+    <td><%= @stats['cas_misses'] %></td>
+  </tr>
+  <tr>
+    <td>Cache flushes:</td>
+    <td><%= @stats['cmd_flush'] %></td>
+  </tr>
+</table>
