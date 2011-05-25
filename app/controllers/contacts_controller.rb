@@ -63,6 +63,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.update_attributes(params[:contact])
+        expire_action :action => :show
         format.html { redirect_to(@contact, :notice => 'Contact was successfully updated.') }
         format.xml  { head :ok }
       else
