@@ -1,3 +1,3 @@
-MemecacheExample::Application.routes.draw do
+MemcacheExample::Application.routes.draw do
   match ':controller(/:action(/:id(.:format)))'
 end
