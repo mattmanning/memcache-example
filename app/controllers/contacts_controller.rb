@@ -78,6 +78,7 @@ class ContactsController < ApplicationController
   def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
+    expire_action :action => :show
 
     respond_to do |format|
       format.html { redirect_to(contacts_url) }
