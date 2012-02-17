@@ -2,7 +2,8 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all
+    @contacts = Contact.all_cached
+    @stats    = Rails.cache.stats.first.last
 
     respond_to do |format|
       format.html # index.html.erb
